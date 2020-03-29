@@ -25,17 +25,17 @@ export default function NewIncident () {
             value,
         }
 
-        try {
-            console.log(ngoId);
+        try{
             await api.post('incidents', data, {
                 headers: {
                     Authorization: ngoId,
                 }
-            });
-            
+            })
+    
             history.push('/profile');
         }
         catch (err) {
+            console.error(err);
             alert('Erro ao cadastrar caso, por favor, tente novamente');
         }
     }
