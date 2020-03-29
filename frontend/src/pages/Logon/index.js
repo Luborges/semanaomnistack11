@@ -36,7 +36,10 @@ export default function Logon () {
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
 
-                    <input placeholder="Sua ID" />
+                    <input placeholder="Sua ID" 
+                        value={id}
+                        onChange={evt => setId(evt.target.value)}
+                        />
                     <button className="button" type='submit'>Entrar</button>
 
                     <Link className="back-link" to='/register'>

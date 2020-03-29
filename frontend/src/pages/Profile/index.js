@@ -14,13 +14,16 @@ export default function Profile () {
 
     const history = useHistory();
 
-    useEffect(async () => {
-        const response = await api.get('profile', {
-            headers: {
-                Authorization: ngoId,
-            }
-        });
-        setIncidents(response.data);
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await api.get('profile', {
+                headers: {
+                    Authorization: ngoId,
+                }
+            });
+            setIncidents(response.data);
+        }
+        fetchData();
     }, [ngoId]);
 
     const handleDeleteIncident = async (id) => {
