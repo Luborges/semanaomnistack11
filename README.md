@@ -1,4 +1,4 @@
-# semanaomnistack11
+# Semana Omnistack 11
 
 This project was made as part of the Rocketseat: "Semana omnistack 11" program. This software is a web and mobile app created with React, Node and React Native which allows NGOs (Non governmental organizations) to create accounts and register incidents asking for donation.
 
